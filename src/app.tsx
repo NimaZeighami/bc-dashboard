@@ -19,28 +19,11 @@ type AppProps = {
 export default function App({ children }: AppProps) {
   useScrollToTop();
 
-  const githubButton = () => (
-    <Fab
-      size="medium"
-      aria-label="Github"
-      sx={{
-        zIndex: 9,
-        right: 20,
-        bottom: 20,
-        width: 48,
-        height: 48,
-        position: 'fixed',
-        bgcolor: 'grey.800',
-      }}
-    >
-      <Iconify width={24} icon="socials:github" sx={{ '--color': 'white' }} />
-    </Fab>
-  );
+
 
   return (
     <ThemeProvider>
       {children}
-      {githubButton()}
     </ThemeProvider>
   );
 }
