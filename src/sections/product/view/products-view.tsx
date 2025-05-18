@@ -89,7 +89,7 @@ export function ProductsView() {
       <CartIcon totalItems={8} />
 
       <Typography variant="h4" sx={{ mb: 5 }}>
-        Products
+        متخصصین
       </Typography>
       <Box
         sx={{
@@ -108,7 +108,7 @@ export function ProductsView() {
             display: 'flex',
           }}
         >
-          <ProductFilters
+          {/* <ProductFilters
             canReset={canReset}
             filters={filters}
             onSetFilters={handleSetFilters}
@@ -134,7 +134,7 @@ export function ProductsView() {
               { value: 'priceDesc', label: 'Price: High-Low' },
               { value: 'priceAsc', label: 'Price: Low-High' },
             ]}
-          />
+          /> */}
         </Box>
       </Box>
 

@@ -2,7 +2,7 @@ import {
   _id,
   _price,
   _times,
-  _company,
+  _project,
   _boolean,
   _fullName,
   _taskNames,
@@ -24,10 +24,10 @@ export const _myAccount = {
 export const _users = [...Array(24)].map((_, index) => ({
   id: _id(index),
   name: _fullName(index),
-  company: _company(index),
+  company: _project(index),
   isVerified: _boolean(index),
   avatarUrl: `/assets/images/avatar/avatar-${index + 1}.webp`,
-  status: index % 4 ? 'active' : 'banned',
+  status: index % 4 ? 'فعال' : 'banned',
   role:
     [
       'Leader',
@@ -92,7 +92,7 @@ export const _products = [...Array(24)].map((_, index) => {
       (setIndex === 24 && COLORS.slice(5, 6)) ||
       COLORS,
     status:
-      ([1, 3, 5].includes(setIndex) && 'sale') || ([4, 8, 12].includes(setIndex) && 'new') || '',
+      ([1, 3, 5].includes(setIndex) && 'تازه') || ([4, 8, 12].includes(setIndex) && 'حرفه ای') || '',
   };
 });
 
@@ -134,22 +134,22 @@ export const _timeline = [...Array(5)].map((_, index) => ({
 export const _traffic = [
   {
     value: 'facebook',
-    label: 'Facebook',
+    label: 'اینستاگرام',
     total: 19500,
   },
   {
     value: 'google',
-    label: 'Google',
+    label: 'گوگل',
     total: 91200,
   },
   {
     value: 'linkedin',
-    label: 'Linkedin',
+    label: 'لینکدین',
     total: 69800,
   },
   {
     value: 'twitter',
-    label: 'Twitter',
+    label: 'توییتر',
     total: 84900,
   },
 ];
@@ -164,8 +164,8 @@ export const _tasks = Array.from({ length: 5 }, (_, index) => ({
 export const _notifications = [
   {
     id: _id(1),
-    title: 'Your order is placed',
-    description: 'waiting for shipping',
+    title: 'سفارش شما رسید',
+    description: 'منتظر ارسال',
     avatarUrl: null,
     type: 'order-placed',
     postedAt: _times(1),
@@ -174,7 +174,7 @@ export const _notifications = [
   {
     id: _id(2),
     title: _fullName(2),
-    description: 'answered to your commen',
+    description: 'به نظر شما پاسخ داد',
     avatarUrl: '/assets/images/avatar/avatar-2.webp',
     type: 'friend-interactive',
     postedAt: _times(2),
@@ -182,8 +182,8 @@ export const _notifications = [
   },
   {
     id: _id(3),
-    title: 'You have new message',
-    description: '5 unread messages',
+    title: 'شما پیام جدید دارید',
+    description: '7 پیام خوانده نشده',
     avatarUrl: null,
     type: 'chat-message',
     postedAt: _times(3),
@@ -191,8 +191,8 @@ export const _notifications = [
   },
   {
     id: _id(4),
-    title: 'You have new mail',
-    description: 'sent from Guido Padberg',
+    title: 'شما ایمیل جدید دارید',
+    description: 'ارسال شده توسط بیزنس سنتر',
     avatarUrl: null,
     type: 'mail',
     postedAt: _times(4),
@@ -200,8 +200,8 @@ export const _notifications = [
   },
   {
     id: _id(5),
-    title: 'Delivery processing',
-    description: 'Your order is being shipped',
+    title: 'فرآیند ارسال',
+    description: 'سفارش شما در حال بارگیری میباشد',
     avatarUrl: null,
     type: 'order-shipped',
     postedAt: _times(5),

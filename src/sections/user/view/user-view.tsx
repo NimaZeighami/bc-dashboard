@@ -49,14 +49,14 @@ export function UserView() {
         }}
       >
         <Typography variant="h4" sx={{ flexGrow: 1 }}>
-          Users
+          پروژه ها 
         </Typography>
         <Button
           variant="contained"
           color="inherit"
           startIcon={<Iconify icon="mingcute:add-line" />}
         >
-          New user
+          ایجاد پروژه
         </Button>
       </Box>
 
@@ -86,11 +86,11 @@ export function UserView() {
                   )
                 }
                 headLabel={[
-                  { id: 'name', label: 'Name' },
-                  { id: 'company', label: 'Company' },
-                  { id: 'role', label: 'Role' },
-                  { id: 'isVerified', label: 'Verified', align: 'center' },
-                  { id: 'status', label: 'Status' },
+                  { id: 'name', label: 'انجام دهنده' },
+                  { id: 'project', label: ' پروژه' },
+                  { id: 'role', label: 'نقش' },
+                  { id: 'isVerified', label: 'تاییده شده', align: 'center' },
+                  { id: 'status', label: 'وضعیت' },
                   { id: '' },
                 ]}
               />

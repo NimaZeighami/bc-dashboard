@@ -65,7 +65,7 @@ export function Searchbar({ sx, ...other }: BoxProps) {
               autoFocus
               fullWidth
               disableUnderline
-              placeholder="Search…"
+              placeholder="جستجو...."
               startAdornment={
                 <InputAdornment position="start">
                   <Iconify width={20} icon="eva:search-fill" sx={{ color: 'text.disabled' }} />
@@ -74,7 +74,7 @@ export function Searchbar({ sx, ...other }: BoxProps) {
               sx={{ fontWeight: 'fontWeightBold' }}
             />
             <Button variant="contained" onClick={handleClose}>
-              Search
+              جستجو
             </Button>
           </Box>
         </Slide>

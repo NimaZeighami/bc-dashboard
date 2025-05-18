@@ -102,9 +102,9 @@ export function NotificationsPopover({ data = [], sx, ...other }: NotificationsP
           }}
         >
           <Box sx={{ flexGrow: 1 }}>
-            <Typography variant="subtitle1">Notifications</Typography>
+            <Typography variant="subtitle1">اعلانات</Typography>
             <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-              You have {totalUnRead} unread messages
+              شما {totalUnRead} پیام خوانده نشده دارید !!
             </Typography>
           </Box>
 
@@ -123,8 +123,11 @@ export function NotificationsPopover({ data = [], sx, ...other }: NotificationsP
           <List
             disablePadding
             subheader={
-              <ListSubheader disableSticky sx={{ py: 1, px: 2.5, typography: 'overline' }}>
-                New
+              <ListSubheader
+                disableSticky
+                sx={{ py: 1, px: 2.5, typography: 'overline' }}
+              >
+                تازه ها
               </ListSubheader>
             }
           >
@@ -137,7 +140,7 @@ export function NotificationsPopover({ data = [], sx, ...other }: NotificationsP
             disablePadding
             subheader={
               <ListSubheader disableSticky sx={{ py: 1, px: 2.5, typography: 'overline' }}>
-                Before that
+                مشاهده شده
               </ListSubheader>
             }
           >
@@ -151,7 +154,7 @@ export function NotificationsPopover({ data = [], sx, ...other }: NotificationsP
 
         <Box sx={{ p: 1 }}>
           <Button fullWidth disableRipple color="inherit">
-            View all
+            مشاهده همه 
           </Button>
         </Box>
       </Popover>

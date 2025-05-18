@@ -111,7 +111,7 @@ export function NavContent({ data, slots, workspaces, sx }: NavContentProps) {
 
   return (
     <>
-      <Logo sx={{ mb: 2 }} />
+      <Logo sx={{ mb: 2 }}   />
 
       {slots?.topArea}
 

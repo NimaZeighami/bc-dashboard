@@ -39,7 +39,7 @@ export function BlogView({ posts }: Props) {
         }}
       >
         <Typography variant="h4" sx={{ flexGrow: 1 }}>
-          Blog
+          نمونه کارها
         </Typography>
         <Button
           variant="contained"
@@ -58,7 +58,7 @@ export function BlogView({ posts }: Props) {
           justifyContent: 'space-between',
         }}
       >
-        <PostSearch posts={posts} />
+        {/* <PostSearch posts={posts} />
         <PostSort
           sortBy={sortBy}
           onSort={handleSort}
@@ -67,7 +67,7 @@ export function BlogView({ posts }: Props) {
             { value: 'popular', label: 'Popular' },
             { value: 'oldest', label: 'Oldest' },
           ]}
-        />
+        /> */}
       </Box>
 
       <Grid container spacing={3}>

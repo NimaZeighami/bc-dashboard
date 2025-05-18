@@ -14,27 +14,28 @@ export type NavItem = {
 
 export const navData = [
   {
-    title: 'Dashboard',
+    title: 'داشبورد',
     path: '/',
     icon: icon('ic-analytics'),
   },
   {
-    title: 'User',
-    path: '/user',
-    icon: icon('ic-user'),
+    title: 'مدیریت پروژه ها   ----  ( کارفرما )',
+    path: '/project-management-client',
+    // project-management-user
+    icon: icon('ic-cart'),
   },
   {
-    title: 'Product',
-    path: '/products',
-    icon: icon('ic-cart'),
+    title: 'انتخاب متخصص',
+    path: '/select-freelancer',
+    icon: icon('ic-user'),
     info: (
       <Label color="error" variant="inverted">
-        +3
+        حرفه ای
       </Label>
     ),
   },
   {
-    title: 'Blog',
+    title: 'نمونه کارها',
     path: '/blog',
     icon: icon('ic-blog'),
   },

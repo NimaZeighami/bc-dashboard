@@ -1,12 +1,12 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { CacheProvider } from '@emotion/react';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router';
 
 import App from './app';
+import cacheRtl from './emotion-cache';
 import { routesSection } from './routes/sections';
 import { ErrorBoundary } from './routes/components';
-
-// ----------------------------------------------------------------------
 
 const router = createBrowserRouter([
   {
@@ -24,6 +24,8 @@ const root = createRoot(document.getElementById('root')!);
 
 root.render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <CacheProvider value={cacheRtl}>
+      <RouterProvider router={router} />
+    </CacheProvider>
   </StrictMode>
 );

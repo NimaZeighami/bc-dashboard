@@ -1,7 +1,18 @@
 import type { CommonColors } from '@mui/material/styles';
 
+import '@mui/material/styles';
+
 import type { ThemeCssVariables } from './types';
 import type { PaletteColorNoChannels } from './core/palette';
+
+declare module '@mui/material/styles' {
+  interface Palette {
+    blue: Palette['primary'];
+  }
+  interface PaletteOptions {
+    blue?: PaletteOptions['primary'];
+  }
+}
 
 // ----------------------------------------------------------------------
 
@@ -10,7 +21,7 @@ type ThemeConfig = {
   cssVariables: ThemeCssVariables;
   fontFamily: Record<'primary' | 'secondary', string>;
   palette: Record<
-    'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'error',
+    'primary' | 'blue' | 'secondary' | 'info' | 'success' | 'warning' | 'error',
     PaletteColorNoChannels
   > & {
     common: Pick<CommonColors, 'black' | 'white'>;
@@ -37,7 +48,17 @@ export const themeConfig: ThemeConfig = {
    * Palette
    *************************************** */
   palette: {
+    //! Based on Logo color
     primary: {
+      lighter: '#F9D3D5',
+      light: '#ED757A',
+      main: '#D81F26',
+      dark: '#B5181F',
+      darker: '#8A1017',
+      contrastText: '#FFFFFF',
+    },
+    // prior primary color
+    blue: {
       lighter: '#D0ECFE',
       light: '#73BAFB',
       main: '#1877F2',
