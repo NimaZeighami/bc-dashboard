@@ -26,7 +26,7 @@ import type { UserProps } from '../user-table-row';
 
 // ----------------------------------------------------------------------
 
-export function UserView() {
+export function ClientProjectsView() {
   const table = useTable();
 
   const [filterName, setFilterName] = useState('');
@@ -49,7 +49,7 @@ export function UserView() {
         }}
       >
         <Typography variant="h4" sx={{ flexGrow: 1 }}>
-          پروژه ها 
+          پروژه ها
         </Typography>
         <Button
           variant="contained"

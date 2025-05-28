@@ -6,12 +6,7 @@ import type { ThemeCssVariables } from './types';
 import type { PaletteColorNoChannels } from './core/palette';
 
 declare module '@mui/material/styles' {
-  interface Palette {
-    blue: Palette['primary'];
-  }
-  interface PaletteOptions {
-    blue?: PaletteOptions['primary'];
-  }
+  
 }
 
 // ----------------------------------------------------------------------
@@ -21,7 +16,7 @@ type ThemeConfig = {
   cssVariables: ThemeCssVariables;
   fontFamily: Record<'primary' | 'secondary', string>;
   palette: Record<
-    'primary' | 'blue' | 'secondary' | 'info' | 'success' | 'warning' | 'error',
+    'primary'| 'secondary' | 'info' | 'success' | 'warning' | 'error',
     PaletteColorNoChannels
   > & {
     common: Pick<CommonColors, 'black' | 'white'>;
@@ -48,22 +43,12 @@ export const themeConfig: ThemeConfig = {
    * Palette
    *************************************** */
   palette: {
-    //! Based on Logo color
     primary: {
-      lighter: '#F9D3D5',
-      light: '#ED757A',
-      main: '#D81F26',
-      dark: '#B5181F',
-      darker: '#8A1017',
-      contrastText: '#FFFFFF',
-    },
-    // prior primary color
-    blue: {
-      lighter: '#D0ECFE',
-      light: '#73BAFB',
-      main: '#1877F2',
-      dark: '#0C44AE',
-      darker: '#042174',
+      lighter: '#FFE9D5',
+      light: '#FFAC82',
+      main: '#FF5630',
+      dark: '#B71D18',
+      darker: '#7A0916',
       contrastText: '#FFFFFF',
     },
     secondary: {
@@ -99,11 +84,11 @@ export const themeConfig: ThemeConfig = {
       contrastText: '#1C252E',
     },
     error: {
-      lighter: '#FFE9D5',
-      light: '#FFAC82',
-      main: '#FF5630',
-      dark: '#B71D18',
-      darker: '#7A0916',
+      lighter: '#D0ECFE',
+      light: '#73BAFB',
+      main: '#1877F2',
+      dark: '#0C44AE',
+      darker: '#042174',
       contrastText: '#FFFFFF',
     },
     grey: {

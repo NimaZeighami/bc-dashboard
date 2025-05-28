@@ -8,12 +8,12 @@ import Typography from '@mui/material/Typography';
 import { _products } from 'src/_mock';
 import { DashboardContent } from 'src/layouts/dashboard';
 
-import { ProductItem } from '../product-item';
-import { ProductSort } from '../product-sort';
-import { CartIcon } from '../product-cart-widget';
-import { ProductFilters } from '../product-filters';
+import { ProductItem } from '../expert-item';
+import { ProductSort } from '../expert-sort';
+import { CartIcon } from '../expert-cart-widget';
+import { ProductFilters } from '../expert-filters';
 
-import type { FiltersProps } from '../product-filters';
+import type { FiltersProps } from '../expert-filters';
 
 // ----------------------------------------------------------------------
 
@@ -57,7 +57,7 @@ const defaultFilters = {
   category: CATEGORY_OPTIONS[0].value,
 };
 
-export function ProductsView() {
+export function ExpertsView() {
   const [sortBy, setSortBy] = useState('featured');
 
   const [openFilter, setOpenFilter] = useState(false);

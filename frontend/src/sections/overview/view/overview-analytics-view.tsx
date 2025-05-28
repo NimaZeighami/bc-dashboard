@@ -34,7 +34,23 @@ export function OverviewAnalyticsView() {
               categories: ['مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند', 'فروردین', 'اردیبهتشت'],
               series: [22, 8, 35, 50, 82, 84, 77, 12],
             }}
-            color="info"
+            color="error"
+          />
+        </Grid>
+
+ 
+
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+          <AnalyticsWidgetSummary
+            title="بازدید"
+            percent={-0.1}
+            total={1352831}
+            color="secondary"
+            icon={<img alt="بازدید" src="/assets/icons/glass/ic-glass-users.svg" />}
+            chart={{
+              categories: ['مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند', 'فروردین', 'اردیبهتشت'],
+              series: [56, 47, 40, 62, 73, 30, 23, 54],
+            }}
           />
         </Grid>
 
@@ -54,24 +70,10 @@ export function OverviewAnalyticsView() {
 
         <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <AnalyticsWidgetSummary
-            title="بازدید"
-            percent={-0.1}
-            total={1352831}
-            color="secondary"
-            icon={<img alt="بازدید" src="/assets/icons/glass/ic-glass-users.svg" />}
-            chart={{
-              categories: ['مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند', 'فروردین', 'اردیبهتشت'],
-              series: [56, 47, 40, 62, 73, 30, 23, 54],
-            }}
-          />
-        </Grid>
-
-        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-          <AnalyticsWidgetSummary
             title="فاکتور"
             percent={3.6}
             total={234}
-            color="error"
+            color="primary"
             icon={<img alt="فاکتور" src="/assets/icons/glass/ic-glass-message.svg" />}
             chart={{
               categories: ['مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند', 'فروردین', 'اردیبهتشت'],

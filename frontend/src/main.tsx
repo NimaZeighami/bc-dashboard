@@ -7,6 +7,7 @@ import App from './app';
 import cacheRtl from './emotion-cache';
 import { routesSection } from './routes/sections';
 import { ErrorBoundary } from './routes/components';
+import { AuthProvider } from './context/AuthContext';
 
 const router = createBrowserRouter([
   {
@@ -24,8 +25,10 @@ const root = createRoot(document.getElementById('root')!);
 
 root.render(
   <StrictMode>
-    <CacheProvider value={cacheRtl}>
-      <RouterProvider router={router} />
-    </CacheProvider>
+    <AuthProvider>
+      <CacheProvider value={cacheRtl}>
+        <RouterProvider router={router} />
+      </CacheProvider>
+    </AuthProvider>
   </StrictMode>
 );

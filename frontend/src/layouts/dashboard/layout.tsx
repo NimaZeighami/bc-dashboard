@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
 import { useTheme } from '@mui/material/styles';
 
+import { useAuth } from 'src/context/AuthContext';  
 import { _langs, _notifications } from 'src/_mock';
 
 import { NavMobile, NavDesktop } from './nav';
@@ -21,7 +22,7 @@ import { MenuButton } from '../components/menu-button';
 import { HeaderSection } from '../core/header-section';
 import { LayoutSection } from '../core/layout-section';
 import { AccountPopover } from '../components/account-popover';
-import { LanguagePopover } from '../components/language-popover';
+// import { LanguagePopover } from '../components/language-popover';
 import { NotificationsPopover } from '../components/notifications-popover';
 
 import type { MainSectionProps } from '../core/main-section';
@@ -48,6 +49,9 @@ export function DashboardLayout({
   layoutQuery = 'lg',
 }: DashboardLayoutProps) {
   const theme = useTheme();
+  const { role } = useAuth();
+  const currentRole = role ?? 'client';
+  const filteredNavData = navData.filter(item => !item.role || item.role.includes(currentRole));
 
   const { value: open, onFalse: onClose, onTrue: onOpen } = useBoolean();
 
@@ -71,7 +75,7 @@ export function DashboardLayout({
             onClick={onOpen}
             sx={{ mr: 1, ml: -1, [theme.breakpoints.up(layoutQuery)]: { display: 'none' } }}
           />
-          <NavMobile data={navData} open={open} onClose={onClose} workspaces={_workspaces} />
+          <NavMobile data={filteredNavData} open={open} onClose={onClose} workspaces={_workspaces} />
         </>
       ),
       rightArea: (
@@ -117,7 +121,7 @@ export function DashboardLayout({
        * @Sidebar
        *************************************** */
       sidebarSection={
-        <NavDesktop data={navData} layoutQuery={layoutQuery} workspaces={_workspaces} />
+        <NavDesktop data={filteredNavData} layoutQuery={layoutQuery} workspaces={_workspaces} />
       }
       /** **************************************
        * @Footer

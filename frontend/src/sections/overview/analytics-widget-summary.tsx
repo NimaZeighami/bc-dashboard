@@ -35,7 +35,7 @@ export function AnalyticsWidgetSummary({
   total,
   chart,
   percent,
-  color = 'primary',
+  color ="info",
   ...other
 }: Props) {
   const theme = useTheme();

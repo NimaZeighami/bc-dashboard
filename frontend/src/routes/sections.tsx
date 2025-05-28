@@ -10,14 +10,19 @@ import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgr
 import { AuthLayout } from 'src/layouts/auth';
 import { DashboardLayout } from 'src/layouts/dashboard';
 
+// import { FreeLancerProjectsView } from 'src/sections/project-freelancer/project-freelancer-view';
+// import { ProfileManagementView } from 'src/sections/profile-management/profile-management-view';
+
 // ----------------------------------------------------------------------
 
 export const DashboardPage = lazy(() => import('src/pages/dashboard'));
-export const BlogPage = lazy(() => import('src/pages/blog'));
+export const PortfolioPage = lazy(() => import('src/pages/portfolio'));
 export const ClientProjectsPage = lazy(() => import('src/pages/client-projects'));
 export const SignInPage = lazy(() => import('src/pages/sign-in'));
-export const ProductsPage = lazy(() => import('src/pages/products'));
+export const ExpertsPage = lazy(() => import('src/pages/experts'));
 export const Page404 = lazy(() => import('src/pages/page-not-found'));
+export const FreeLancerProjectsPage = lazy(() => import('src/pages/freelancer-projects'));
+export const ProfileManagementPage = lazy(() => import('src/pages/profile-management'));
 
 const renderFallback = () => (
   <Box
@@ -51,8 +56,11 @@ export const routesSection: RouteObject[] = [
     children: [
       { index: true, element: <DashboardPage /> },
       { path: 'project-management-client', element: <ClientProjectsPage /> },
-      { path: 'select-freelancer', element: <ProductsPage /> },
-      { path: 'blog', element: <BlogPage /> },
+      { path: 'project-management-freelancer', element: <FreeLancerProjectsPage /> }, //
+      { path: 'select-freelancer', element: <ExpertsPage /> },
+      { path: 'portfolio', element: <PortfolioPage /> },
+      { path: 'profile-manager', element: <ProfileManagementPage /> },
+      
     ],
   },
   {
@@ -68,4 +76,5 @@ export const routesSection: RouteObject[] = [
     element: <Page404 />,
   },
   { path: '*', element: <Page404 /> },
+  { path: 'profile', element: <Page404 /> },
 ];
