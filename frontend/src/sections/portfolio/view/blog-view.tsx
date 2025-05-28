@@ -41,13 +41,6 @@ export function PortfolioView({ posts }: Props) {
         <Typography variant="h4" sx={{ flexGrow: 1 }}>
           نمونه کارها
         </Typography>
-        <Button
-          variant="contained"
-          color="inherit"
-          startIcon={<Iconify icon="mingcute:add-line" />}
-        >
-          New post
-        </Button>
       </Box>
 
       <Box
