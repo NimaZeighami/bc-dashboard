@@ -6,7 +6,7 @@ export enum RoleEnum {
     Admin = 'admin',
     Client = 'client',
     Freelancer = 'freelancer',
-    None = 'none'  // enum members can't be null, so use a string like 'none'
+    None = 'none'  
   }
 
 interface AuthContextType {

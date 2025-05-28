@@ -54,7 +54,7 @@ export const navData = [
   },
   {
     title: 'پیش نمایش پروفایل',
-    path: '/profile-management',
+    path: '/profile-preview',
     icon: icon('ic-blog'),
     role: RoleEnum.Freelancer,
   },

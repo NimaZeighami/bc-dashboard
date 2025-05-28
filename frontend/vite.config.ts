@@ -2,12 +2,14 @@ import path from 'path';
 import checker from 'vite-plugin-checker';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
+import tailwindcss from '@tailwindcss/vite'
 
 
 const PORT = 3039;
 
 export default defineConfig({
   plugins: [
+    tailwindcss(),
     react(),
     checker({
       typescript: true,
