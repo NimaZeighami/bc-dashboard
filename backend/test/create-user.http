@@ -1,0 +1,33 @@
+POST http://localhost:8080/users HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "mmd",
+  "lastName": "aliani",
+  "email": "ali.karimi@example.com",
+  "phoneNumber": "09121234567",
+  "password": "securePass123!",
+  "role": "freelancer",
+  "isVerified": false,
+  "createdAt": "2025-05-28T20:43:12Z",
+  "updatedAt": "2025-05-28T20:43:12Z",
+  "profileImage": "https://example.com/images/ali.jpg",
+  "bio": "Experienced video editor with 5 years in the field.",
+  "location": "Tehran, Iran",
+  "website": "https://alikarimiportfolio.com",
+  "instagram": "@ali.editz",
+  "linkedIn": "https://linkedin.com/in/ali-karimi",
+
+  "skills": ["Editing", "Color Grading", "Sound Design"],
+  "portfolioURLs": [
+    "https://vimeo.com/12345678",
+    "https://youtu.be/abcdEFG"
+  ],
+  "hourlyRate": 25.5,
+  "available": true,
+  "experience": "5 years working with Adobe Premiere and DaVinci Resolve.",
+
+  "companyName": "",
+  "projectHistory": []
+}
+
